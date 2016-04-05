@@ -303,7 +303,25 @@
 
       
         
-          <p>leetCode的第一题，代码如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">var twoSum = <span class="keyword">function</span>(nums, target) &#123;</span><br><span class="line">    var map = &#123;&#125;;</span><br><span class="line">    var len = nums.length;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (var i=0; i&lt;len; i++)&#123;</span><br><span class="line"></span><br><span class="line">        var el = nums[i];</span><br><span class="line">        var diff = target - el;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>((map[diff] !== undefined) &amp;&amp; (i !== map[diff].position))&#123;</span><br><span class="line">            var posX = map[diff].position;</span><br><span class="line">            <span class="keyword">if</span>(i &gt; posX)&#123;</span><br><span class="line">                <span class="built_in">return</span> [posX, i]</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="built_in">return</span> [i, posX];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        map[el] = &#123;value: diff, position: i&#125;;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+          <p>leetCode的第一题，代码如下<br>‘<br>var twoSum = function(nums, target) {<br>    var map = {};<br>    var len = nums.length;</p>
+<pre><code>for (var i=0; i&lt;len; i++){
+
+    var el = nums[i];
+    var diff = target - el;
+
+    if((map[diff] !== undefined) &amp;&amp; (i !== map[diff].position)){
+        var posX = map[diff].position;
+        if(i &gt; posX){
+            return [posX, i]
+        } else {
+            return [i, posX];
+        }
+    }
+
+    map[el] = {value: diff, position: i};
+
+}
+</code></pre><p>};<br>‘<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/04/05/leet-code-1-twoSum/#more" rel="contents">
               阅读全文 &raquo;
