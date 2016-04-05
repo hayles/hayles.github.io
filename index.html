@@ -303,25 +303,10 @@
 
       
         
-          <p>leetCode的第一题，代码如下<br>‘var twoSum = function(nums, target) {<br>    var map = {};<br>    var len = nums.length;</p>
-<pre><code>for (var i=0; i&lt;len; i++){
+          
+          leetCode的第一题，代码如下12345678910111213141516171819202122var twoSum = function(nums, target) &#123;    var map = &#123;&#125;;    var len = nums.length;   
+          ...
 
-    var el = nums[i];
-    var diff = target - el;
-
-    if((map[diff] !== undefined) &amp;&amp; (i !== map[diff].position)){
-        var posX = map[diff].position;
-        if(i &gt; posX){
-            return [posX, i]
-        } else {
-            return [i, posX];
-        }
-    }
-
-    map[el] = {value: diff, position: i};
-
-}
-</code></pre><p>};’<br>本来我的方法是用两个for循环遍历数组，找出两数之和等于target的两个数，并返回这两个数在数组中的下标，测试单例时速度还行，提交以后发现速度在300ms左右。感觉并不信服。<br>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/04/05/leet-code-1-twoSum/#more" rel="contents">
               阅读全文 &raquo;
